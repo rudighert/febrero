@@ -61,3 +61,21 @@ body{
 .card.aback{
   background-color: #8e44ad;
 }
+
+.letter{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  padding: 100px;
+}
+.indications{
+  padding: 0 20px;
+}
+.indications span{
+  font-weight: bold;
+}

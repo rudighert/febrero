@@ -33,7 +33,14 @@
 
 
     <div class="row">
+      <div class="letter">
+        holaaaaa
+      </div>
       <div class="col-xs-3 col-sm-3 col-md-3">
+        <div class="indications">
+          <h3>Indicaciones:</h3>
+          <p>Debes encontrar los pares para obtener tu gran premio, ojo, solo puedes <span>equivocarte 3 veces</span></p>
+        </div>
       </div>
       <div class="col-xs-9 col-sm-9 col-md-9">
         <div class="row">
@@ -70,6 +77,11 @@
 
   var click = 0;
   var prev  = -1;
+  var size_cards = 12;
+  var attempts = 0;
+  var indications = '';
+
+
   $(document).ready(function(){
     $('.content_card').on('click','.flip-container', function(){
       $(this).addClass('clicked');
@@ -82,16 +94,22 @@
           $(this).addClass('pair');
           $('.flip-container[data-number="'+prev+'"]').addClass('pair');
           $('.flip-container[data-number="'+number+'"]').addClass('pair');
+          if($('.flip-container.pair').size()==size_cards){
+            $('.letter').show('slow')
+          }
         }else{
+          attempts++;
+
+          if(attempts==1)
+            $('.indications p').html("texto 1");
+          if(attempts==2)
+            $('.indications p').html("texto 2");
           setTimeout(function(){ $('.flip-container').removeClass('clicked'); }, 1000);
 
         }
 
       }else{
         prev = $(this).data('number');
-        console.log(prev);
-        console.log(number);
-
       }
 
 
