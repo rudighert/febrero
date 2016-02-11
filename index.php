@@ -24,36 +24,35 @@
   $baraja   = array_fill(0, 12, 'card');
   $imagenes = array("url1","url2","url3","url4","url5","url6");
   $random   = array_merge(array_values(randomGen(0,5,6)),array_values(randomGen(0,5,6)));
-
+  $text     = ["L","I","S","y","","T","E","","A","M","O","♥"];
 ?>
   <body>
 
-    <header>
-    </header>
+  <header>
+  </header>
 
-
+  <div class="wrapper">
     <div class="row">
       <div class="letter">
-        holaaaaa
+        Como ves ya has ganado! De todas formas, ibas a ganar igual.... Jajajajaja
+        Todo lo que ha pasado hasta acá lissy realmente es lo más lindo de mi vida, he dado lo mejor que he podido a tu lado y de alguna u otra forma me las ingenio para darte alegrías .... Feliz día del amor mi lissy más linda ... En este día solo quiero recordarte lo feliz que estoy a tu lado, que te amo demasiado y sigo dando las gracias por estar contigo, compartir junto a ti y hacer todo lo que se nos ocurra ... Muchas cosas a tu lado tienen mucho sentido en este momento, como la frase que siempre me decían mis viejos "tranquilo, ya llegará la persona indicada" y siento que eres tú, me lo dice mi cabeza y me lo dice mi corazón... Sé que estamos partiendo, que falta mucho camino por recorrer, que la magia del principio de una relación no perdura todo el tiempo pero eso no quiere decir que no vayamos evolucionando y creciendo como pareja ... La verdad es que quiero una vida contigo Lissy , me encantas tú y el mundo que te rodea, amo quién eres por dentro y por fuera y me enamora sentir que a tu lado soy cada vez mejor .... Te amo como nunca antes pensé poder , todo lo que siento por ti es totalmente nuevo y me encanta .... Este es el primero de muchos días del amor a tu lado, y espero que la vida me de la oportunidad de sorprenderte cada día.
+        Este es mi regalo más ñoño que te he dado , pero sabes que soy informático jajajajaja pero de todas formas te tengo algo chiquitito que espero que te guste, te amo lissy, todos los días es más y todos los días quiero pasar más a tu lado  ...
+        Te amo con locura , y como no? Si eres el amor que tanto soñé ♥ ♥ ♥ ♥ ♥ ♥
       </div>
-      <div class="col-xs-3 col-sm-3 col-md-3">
-        <div class="indications">
-          <h3>Indicaciones:</h3>
-          <p>Debes encontrar los pares para obtener tu gran premio, ojo, solo puedes <span>equivocarte 3 veces</span></p>
-        </div>
-      </div>
-      <div class="col-xs-9 col-sm-9 col-md-9">
+
+      <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="row">
           <?php foreach ($baraja as $key => $value): ?>
             <div class="col-xs-3 col-sm-3 col-md-3 content_card">
               <div class="flip-container" data-number="<?php echo $random[$key] ?>">
                 <div class="flipper">
                   <div class="front">
-                    <div class="card aback"></div>
+                    <div class="card aback">
+                      <div class="char"><?php echo  $text[$key] ?></div>
+                    </div>
                   </div>
                   <div class="back">
-                    <div class="card face">
-                      <h1><?php echo $random[$key] ?></h1>
+                    <div class="card face" style="background: url(images/<?php echo $random[$key] ?>.jpg) center no-repeat; background-size: cover">
                     </div>
                   </div>
                 </div>
@@ -64,7 +63,17 @@
       </div>
     </div>
 
+  </div>
 
+  <div class="preload">
+    <img src="images/0.jpg">
+    <img src="images/1.jpg">
+    <img src="images/2.jpg">
+    <img src="images/3.jpg">
+    <img src="images/4.jpg">
+    <img src="images/5.jpg">
+    <img src="images/letter.png">
+  </div>
 
 
 

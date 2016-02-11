@@ -6,6 +6,9 @@ body{
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.wrapper{
+
+}
 .flip-container {
   perspective: 1000;
 }
@@ -16,9 +19,12 @@ body{
 }
 
 .flip-container,
-.front, .back {
-  width: 110px;
-  height: 110px;
+.front, .back,
+.card{
+  width: 245px;
+  height: 245px;
+  box-shadow: 1px 1px 4px #A8A8A8;
+  margin: 0 auto;
 }
 
 .flipper {
@@ -50,9 +56,8 @@ body{
 }
 
 .card{
-  width: 110px;
-  height: 110px;
   padding: 10px;
+  position: relative;
 }
 
 .card.face{
@@ -72,10 +77,38 @@ body{
   z-index: 10;
   display: none;
   padding: 100px;
+  font-size: 25px;
+  text-align: justify;
+  background: url(../images/letter.png) center no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 .indications{
   padding: 0 20px;
 }
 .indications span{
   font-weight: bold;
+}
+.indications p{
+  margin-top: 40px;
+  font-size: 20px;
+}
+.char{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -50px;
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+}
+.preload{
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
 }
